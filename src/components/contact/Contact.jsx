@@ -1,7 +1,8 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import '../contact/Contact.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import emailjs from '@emailjs/browser';
 import {MdOutlineMail} from 'react-icons/md';
 import {RxTwitterLogo} from 'react-icons/rx';
 import {FaInstagram} from 'react-icons/fa';
@@ -11,6 +12,17 @@ const Contact = () => {
   useEffect(() => {
     Aos.init({});
   }, []);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_uvj0l4r', 'template_ky16upu', form.current, 't-CBVvJCg7bVtUhxo')
+
+    e.target.reset()
+  };
+
   return (
     <section className='contact' id='contact'>
       <div data-aos="fade-up" data-aos-duration="4000" className="contact__header">
@@ -44,11 +56,12 @@ const Contact = () => {
         <div className="form">
           <h3>Send a Direct Message</h3>
 
-          <form action=''>
-            <input name='name' type='text' placeholder='Full Name'></input>
-            <input name='email' type='email' placeholder='Email'></input>
+          <form ref={form} onSubmit={sendEmail}>
+            <input name='name' type='text' placeholder='Full Name' required></input>
+            <input name='email' type='email' placeholder='Email' required></input>
             <input name='tel' type='tel' placeholder='Phone Number'></input>
-            <textarea name='message' type='textarea' placeholder='Enter text here' cols={'7'} rows={'4'}></textarea>
+            <textarea name='message' type='textarea' placeholder='Enter text here' 
+            cols={'7'} rows={'4'} required></textarea>
 
             <button type='submit'>Submit</button>
           </form>
