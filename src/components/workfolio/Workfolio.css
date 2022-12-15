@@ -63,10 +63,11 @@
 }
 
 .text button {
-  width: 9.875rem;
-  height: 2.5rem;
+  width: 8.5rem;
+  height: auto;
+  font-size: 1rem;
   color: white;
-  font-weight: 400;
+  font-weight: 500;
   font-family: var(--maginia);
   border: 1px solid white;
   border-radius: 5px;
@@ -77,4 +78,66 @@
 .text button:hover {
   color: black;
   background: white;
+}
+
+@media screen and (min-width: 37.5rem) {
+  .workfolio {
+    gap: 2.3rem;
+    padding: 6rem 1.25rem;
+  }
+  
+  .workfolio .workfolio__header h2 {
+    font-size: 2rem;
+  }
+  
+  .workfolio .workfolio__header p {
+    font-size: 1.5rem;
+    margin-top: -2rem;
+  }
+  
+  .workfolio .workfolio__details {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .workfolio .workfolio__details img {
+    width: 22.25rem;
+    height: 34.8rem;
+  }
+  
+  .workfolio .workfolio__details .text {
+    gap: 3rem;
+  }
+  
+  .text ul {
+    gap: 2rem;
+  }
+
+  .text ul li {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+
+  .text button {
+    width: 10.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .workfolio {
+    gap: 4rem;
+    padding: 8rem 1.25rem;
+  }
+
+  .workfolio .workfolio__details img {
+    width: 26.25rem;
+    height: 42.8rem;
+  }
+
+  .text ul li {
+    gap: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
 }
