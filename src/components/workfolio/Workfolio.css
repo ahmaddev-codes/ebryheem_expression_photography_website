@@ -65,7 +65,7 @@
 .text button {
   width: 10rem;
   height: auto;
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: white;
   font-weight: 500;
   font-family: var(--maginia);
