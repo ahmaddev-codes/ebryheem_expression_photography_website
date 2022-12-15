@@ -1,0 +1,80 @@
+.workfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 4rem 1.25rem;
+  text-align: center;
+}
+
+.workfolio .workfolio__header {
+  display: block;
+}
+
+.workfolio .workfolio__header h2 {
+  font-family: var(--glamore);
+  font-weight: 400;
+  font-size: 1.875rem;
+}
+
+.workfolio .workfolio__header p {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-top: -2rem;
+}
+
+.workfolio .workfolio__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.workfolio .workfolio__details img {
+  width: 21.25rem;
+  height: 30.8rem;
+}
+
+.workfolio .workfolio__details .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.text ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  text-align: left;
+}
+
+.text ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1.25rem;
+  list-style-type: none;
+  line-height: 1.8rem;
+}
+
+.text button {
+  width: 9.875rem;
+  height: 2.5rem;
+  color: white;
+  font-weight: 400;
+  font-family: var(--maginia);
+  border: 1px solid white;
+  border-radius: 5px;
+  background: transparent;
+  transition: all 300ms ease;
+}
+
+.text button:hover {
+  color: black;
+  background: white;
+}

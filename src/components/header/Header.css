@@ -1,0 +1,113 @@
+.header {
+  position: relative;
+  background-image: url('../../assets/lens2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -27rem;
+  height: 100vh;
+}
+
+.header img {
+  position: absolute;
+  left: 1.25rem;
+  top: 2rem;
+}
+
+.header .header__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-right: 4rem;
+  padding-top: 12rem;
+}
+
+.header__text h1 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+}
+
+.header__text h1 span {
+  font-family: var(--glamore);
+}
+
+.header__text p {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.header .header__social {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  right: 1.25rem;
+  bottom: 15rem;
+}
+
+.header .header__social::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 10rem;
+  bottom: 9rem;
+  background: white;
+}
+
+
+@media screen and (min-width: 37.5rem){
+  .header {
+    background-position: center;
+  }
+  
+  .header img {
+    width: 10rem;
+    height: auto;
+    left: 3rem;
+  }
+
+  .header .header__text {
+    padding-right: 8rem;
+    padding-top: 13rem;
+  }
+
+  .header__text h1 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  .header__text p {
+    font-size: 1.25rem;
+  }
+
+  .header .header__social {
+    bottom: 10rem;
+  }
+}
+
+@media screen and (min-width: 64rem){
+
+  .header .header__text {
+    padding-right: 35rem;
+    padding-top: 15rem;
+  }
+
+  .header__text h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+  }
+
+  .header__text p {
+    font-size: 1.25rem;
+  }
+
+  .header .header__social {
+    bottom: 10rem;
+  }
+}
